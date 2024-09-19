@@ -13,3 +13,7 @@
    ```bash
    git clone <repository-url>
    cd <repository-directory>
+
+2. **Run the Python script**: Copy and paste the below command into your terminal
+    ```python
+    python restaurant.py
