@@ -8,11 +8,11 @@ Required Python packages:
 
 ## Steps to set up and run code 
 1. Clone the repository: Open a terminal on your code editor and run the following commands
-git clone <repository-url>
-cd <repository-directory>
+'git clone <repository-url>'
+'cd <repository-directory>'
 
 2. Run the script using the below command
-python restaurant.py
+'python restaurant.py'
 
 
 
