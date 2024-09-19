@@ -20,12 +20,12 @@
 
 ## 2. How I would design/deploy this using cloud services + decisions/considerations made when designing the solution
 The steps for deployment and design that I took into consideration are:
-a. Data storage
-b. Data processing and transformation
-c. Data extraction
-d. Data querying
-e. Data visualisation
-f. Data monitoring/maintenance.
+1. Data storage
+2. Data processing and transformation
+3. Data extraction
+4. Data querying
+5. Data visualisation
+6. Data monitoring/maintenance.
 
 For the first step, I would use AWS S3 to store raw JSON files and Excel files as it offers scalability for handling large volumes of data. Some considerations
 when designing the solution include ensuring that there are proper security measures in place, such as encryption and access controls. For the second step, 
