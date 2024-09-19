@@ -68,7 +68,7 @@ for index, row in restaurants_list.iterrows():
         if isinstance(events, list) and len(events) > 0:
             for event in events:
                 event_data = event.get('event', {})
-                photos = event.get('photos', [])
+                photos = event_data.get('photos', [])
 
                 # Extract event details 
                 event_id = event_data.get('event_id', 'NA')
@@ -77,17 +77,19 @@ for index, row in restaurants_list.iterrows():
                 event_end = event_data.get('end_date', 'NA')
 
                 # Extract photo URL
-                if photos:
-                    photos_url = photos[0]['photo'].get('url', 'NA')
+                if photos and isinstance(photos, list) and len(photos) > 0:
+                    # Access the 'photo' dictionary inside the list
+                    photo_info = photos[0].get('photo', {})
+                    photo_url = photo_info.get('url', 'NA')
                 else:
-                    photos_url = 'NA'
+                    photo_url = 'NA'
 
                 # Append event details if event occurred in April 2019
                 if '2019-04' in event_start or '2019-04' in event_end:
                     e_id.append(event_id)
                     events_r_id.append(res_id)
                     events_r_name.append(r_name)
-                    p_url.append(photos_url)
+                    p_url.append(photo_url)
                     e_title.append(event_title)
                     e_start.append(event_start)
                     e_end.append(event_end)
